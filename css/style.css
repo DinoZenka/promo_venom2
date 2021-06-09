@@ -91,3 +91,78 @@ header {
     line-height: 140%;
     color: rgba(255, 255, 255, 0.8);
 }
+
+.btn-container {
+    margin: 70px 0;
+    display: flex;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #8D0019;
+    background-color: white;
+    border: none;
+    transition: box-shadow .5s;
+}
+
+.btn-primary .hover {
+    display: none;
+}
+
+.btn-primary:hover .hover {
+    display: block;
+}
+
+.btn-primary:hover {
+    color: white;
+    box-shadow: inset 240px 0 0 #8D0019;
+    transition: box-shadow .6s;
+}
+
+.btn-primary:hover .active {
+    display: none;
+}
+
+.btn-icon {
+    margin-right: 10px;
+}
+
+.btn-link {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-link .hover {
+    display: none;
+}
+
+.btn-link:hover .hover {
+    display: block;
+}
+
+.btn-link:hover .active {
+    display: none;
+}
+
+.btn-link:hover {
+    color: #8D0019;
+}
+
+.venom {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.blood {
+    background: url('../img/blood.png') no-repeat top right, #14131a url('../img/background.jpg') no-repeat center center / 100%;
+}
