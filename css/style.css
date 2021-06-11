@@ -14,6 +14,7 @@ body {
 
 .container {
   max-width: 1140px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -81,19 +82,23 @@ header {
   font-size: 24px;
   line-height: 28px;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 38px;
+  margin-bottom: 3.5%;
+}
+
+.film-logo {
+  width: 70%;
 }
 
 .film-description {
   max-width: 423px;
-  margin-top: 40px;
+  margin-top: 4.5%;
   font-size: 16px;
   line-height: 140%;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .btn-container {
-  margin: 70px 0;
+  margin: 5% 0;
   display: flex;
 }
 
@@ -159,6 +164,7 @@ header {
 
 .venom {
   position: absolute;
+  width: 50%;
   top: 0;
   right: 0;
 }
@@ -263,4 +269,172 @@ header {
 .primary-bg {
   background: #14131a url("../img/background.jpg") no-repeat center center /
     100%;
+}
+.burger {
+  display: none;
+}
+
+.about .venom {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+  }
+  .about .venom {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .venom {
+    top: 20%;
+  }
+  .blood {
+    background: #14131a;
+  }
+}
+@media (max-width: 678px) {
+  .about .venom {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #14131a;
+    z-index: 5;
+    transition: 0.5s;
+  }
+  .nav-menu-item {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 30px 0;
+    transition: width 10.4s linear;
+  }
+  .burger {
+    opacity: 0;
+    z-index: 10;
+  }
+  .nav {
+    margin-left: auto;
+    position: relative;
+  }
+  .burger > span {
+    height: 10px;
+    width: 5px;
+    background: white;
+  }
+  .menu_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .menu_btn > span,
+  .menu_btn > span::before,
+  .menu_btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+  .menu_btn > span::before {
+    top: -7px;
+    left: 0;
+    content: "";
+  }
+  .menu_btn > span::after {
+    top: 7px;
+    content: "";
+  }
+  .burger:checked ~ .menu_btn > span {
+    transform: rotate(45deg);
+    transition: 0.4s;
+  }
+  .burger:checked ~ .menu_btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    transition: 0.4s;
+  }
+  .burger:checked ~ .menu_btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    transition: 0.4s;
+  }
+
+  .burger:checked ~ .menu_btn {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+  }
+
+  .burger:checked ~ .menu_btn + .nav-menu {
+    left: 0;
+    transition: 0.6s;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .film-text {
+    text-align: center;
+  }
+  .btn-container .btn {
+    margin-top: 30px;
+  }
+  .content .col .trailer,
+  .content .col .poster {
+    max-width: 360px;
+    width: 95%;
+  }
+  .content .col .trailer {
+    margin-bottom: 30px;
+  }
+  .content .col .poster {
+    margin-bottom: 30px;
+  }
+  .poster-wrapper {
+    flex-direction: column;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .content .col .trailer,
+  .content .col .poster {
+    width: 100%;
+  }
+  .index .venom {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .col-actors {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+  .content .col .trailer {
+    margin: 0;
+  }
 }
